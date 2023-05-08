@@ -69,13 +69,10 @@ $(document).ready(function(){
                 XHR.addEventListener("load", (event) => {
                 console.log("request submitted");
                 });
-                XHR.addEventListener("error", (event) => {
-                alert("Something went wrong.");
-                });
                 XHR.open("POST", `https://animao-emails.glitch.me`);
                 XHR.setRequestHeader("Content-Type", `multipart/form-data; boundary=${boundary}`);
                 XHR.send(data);
-                
+
             }
         })
     })
