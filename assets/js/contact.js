@@ -55,28 +55,27 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
-                $(form).ajaxSubmit({
-                    type:"POST",
-                    data: $(form).serialize(),
-                    url:"contact_process.php",
-                    success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor','default');
-                            $('#success').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#success').modal('show');
-                        })
-                    },
-                    error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $('#error').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#error').modal('show');
-                        })
-                    }
-                })
+
+                const XHR = new XMLHttpRequest();
+                const boundary = "blob";
+                let data = "";
+
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="name"\r\n\r\n` + document.getElementById("name").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="email"\r\n\r\n` + document.getElementById("email").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="subject"\r\n\r\n` + document.getElementById("subject").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="message"\r\n\r\n` + document.getElementById("message").value + `\r\n`;
+
+                data += `--${boundary}--`;
+                XHR.addEventListener("load", (event) => {
+                console.log("request submitted");
+                });
+                XHR.addEventListener("error", (event) => {
+                alert("Something went wrong.");
+                });
+                XHR.open("POST", `https://animao-emails.glitch.me`);
+                XHR.setRequestHeader("Content-Type", `multipart/form-data; boundary=${boundary}`);
+                XHR.send(data);
+                
             }
         })
     })
