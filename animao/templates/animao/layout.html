@@ -1,0 +1,302 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Animao{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'animao/img/favicon.ico.png' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'animao/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'animao/css/style.css' %}">
+    
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'animao/img/logo/loder.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="{% url 'index' %}"><img src="{% static 'animao/img/logo/logo.png' %}" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li class="active" ><a href="{% url 'index' %}">Home</a></li>
+                                                <li><a href="courses.html">Courses</a></li>
+                                                <li><a href="{% url 'about' %}">About</a></li>
+                                                <!--<li><a href="#">Blog</a>-->
+                                                
+                                                </li>
+                                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="{% url 'register' %}" class="btn">Join</a></li>
+                                                <li class="button-header"><a href="{% url 'login' %}" class="btn btn3">Log in</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    {% block body %}
+    {% endblock %}
+    <footer>
+     <div class="footer-wrappper footer-bg">
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mb-25">
+                                    <a href="{% url 'index' %}"><img src="{% static 'animao/img/logo/logo.png' %}" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>Think about lessons like you never have before.</p>
+                                    </div>
+                                </div>
+                                <!-- social -->
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Subjects</h4>
+                                <ul>
+                                    <li><a href="maths.html">Mathematics</a></li>
+                                    <li><a href="programming.html">Programming</a></li>
+                                    <li><a href="bio.html">Biology</a></li>
+                                    <li><a href="physics.html">Physics</a></li>
+                                    <li><a href="chem.html">Chemistry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                    <li><p "color:white" >Isra Boucetta, Founder</p></li>
+                                    <li><p "color:white" >Lexi MacRury, Head of Instruction</p></li>
+                                    <li><p "color:white" >Arnav Bonigala, Programmer</p></li>
+                                    <li><p "color:white" >Hannah Bowman, Programmer</p></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Footer End-->
+      </div>
+  </footer> 
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+<script src="{% static 'animao/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static 'animao/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'animao/js/popper.min.js' %}"></script>
+<script src="{% static 'animao/js/bootstrap.min.js' %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static 'animao/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static 'animao/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'animao/js/slick.min.js' %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static 'animao/js/wow.min.js' %}"></script>
+<script src="{% static 'animao/js/animated.headline.js' %}"></script>
+<script src="{% static 'animao/js/jquery.magnific-popup.js' %}"></script>
+
+<!-- Date Picker -->
+<script src="{% static 'animao/js/gijgo.min.js' %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static 'animao/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'animao/js/jquery.sticky.js' %}"></script>
+<!-- Progress -->
+<script src="{% static 'animao/js/jquery.barfiller.js' %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static 'animao/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'animao/js/waypoints.min.js' %}"></script>
+<script src="{% static 'animao/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'animao/js/hover-direction-snake.min.js' %}"></script>
+
+<!-- contact js -->
+<!--<script src="{% static 'animao/js/contact.js' %}"></script>-->
+<script src="{% static 'animao/js/jquery.form.js' %}"></script>
+<script src="{% static 'animao/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'animao/js/mail-script.js' %}"></script>
+<script src="{% static 'animao/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<script>
+    $(document).ready(function(){
+    
+    (function($) {
+        "use strict";
+
+    
+    jQuery.validator.addMethod('answercheck', function (value, element) {
+        return this.optional(element) || /^\bcat\b$/.test(value)
+    }, "type the correct answer -_-");
+
+    // validate contactForm form
+    $(function() {
+        $('#contactForm').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                subject: {
+                    required: true,
+                    minlength: 4
+                },
+                number: {
+                    required: true,
+                    minlength: 5
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: {
+                    required: true,
+                    minlength: 20
+                }
+            },
+            messages: {
+                name: {
+                    required: "come on, you have a name, don't you?",
+                    minlength: "your name must consist of at least 2 characters"
+                },
+                subject: {
+                    required: "come on, you have a subject, don't you?",
+                    minlength: "your subject must consist of at least 4 characters"
+                },
+                number: {
+                    required: "come on, you have a number, don't you?",
+                    minlength: "your Number must consist of at least 5 characters"
+                },
+                email: {
+                    required: "no email, no message"
+                },
+                message: {
+                    required: "um...yea, you have to write something to send this form.",
+                    minlength: "thats all? really?"
+                }
+            },
+            submitHandler: function(form) {
+
+                const XHR = new XMLHttpRequest();
+                const boundary = "blob";
+                let data = "";
+
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="name"\r\n\r\n` + document.getElementById("name").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="email"\r\n\r\n` + document.getElementById("email").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="subject"\r\n\r\n` + document.getElementById("subject").value + `\r\n`;
+                data += `--${boundary}\r\ncontent-disposition: form-data; name="message"\r\n\r\n` + document.getElementById("message").value + `\r\n`;
+
+                data += `--${boundary}--`;
+                XHR.addEventListener("load", (event) => {
+                console.log("request submitted");
+                });
+                XHR.open("POST", `https://animao-emails.glitch.me`);
+                XHR.setRequestHeader("Content-Type", `multipart/form-data; boundary=${boundary}`);
+                XHR.send(data);
+
+                alert("Your message has been sent successfully!");
+                window.location.href = "{% url 'index' %}";
+            }
+        })
+    })
+        
+ })(jQuery)
+})
+</script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{% static 'animao/js/plugins.js' %}"></script>
+<script src="{% static 'animao/js/main.js' %}"></script>
+
+</body>
+</html>
