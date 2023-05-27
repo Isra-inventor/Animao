@@ -3933,7 +3933,6 @@ hr {
 .team-pic{
     width: 350px;
     height: 500px;
-    display: flex;
 }
 .cat-cap h5{
     font-size:20px;
