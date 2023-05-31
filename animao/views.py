@@ -4,6 +4,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, Http404
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
+import json
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import *
 # Create your views here.
@@ -65,3 +68,9 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "animao/register.html")
+
+@csrf_exempt
+def api_get_courses(request):
+    if request.method == "GET":
+        courses = Course.objects.all()
+        return JsonResponse(serializers.serialize('json', courses), safe=False)

@@ -9,4 +9,7 @@ urlpatterns = [
     path("accounts/register/", views.register, name="register"),
     path("about", views.about, name="about"),
     path("contact", views.contact, name="contact"),
+
+    #api routes
+    path("api/get_courses", views.api_get_courses, name="apigetcourses"),
 ]
