@@ -9,6 +9,7 @@ urlpatterns = [
     path("accounts/register/", views.register, name="register"),
     path("about", views.about, name="about"),
     path("contact", views.contact, name="contact"),
+    path("courses", views.courses, name="courses"),
 
     #api routes
     path("api/get_courses", views.api_get_courses, name="apigetcourses"),

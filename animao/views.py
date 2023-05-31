@@ -20,6 +20,9 @@ def about(request):
 def contact(request):
     return render(request, "animao/contact.html")
 
+def courses(request):
+    return render(request, "animao/courses.html")
+
 def login_view(request):
     if request.method == "POST":
 
